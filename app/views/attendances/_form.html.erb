@@ -1,0 +1,18 @@
+<%= simple_form_for(@attendance) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <% if admin? %>
+        <%= f.input :login_time %>
+        <%= f.input :logout_time %>
+    <% else %>
+        <%= f.input :login_time, value: DateTime.now %>
+        <%= f.input :logout_time, value: DateTime.now %>
+       <%= f.input :logdin %>
+    <% end %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

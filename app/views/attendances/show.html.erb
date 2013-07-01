@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login time:</b>
+  <%= @attendance.login_time %>
+</p>
+
+<p>
+  <b>Logout time:</b>
+  <%= @attendance.logout_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_attendance_path(@attendance) %> |
+<%= link_to 'Back', attendances_path %>
